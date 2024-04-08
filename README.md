@@ -1,1 +1,0 @@
-# StanislawStankiewicz.github.io
