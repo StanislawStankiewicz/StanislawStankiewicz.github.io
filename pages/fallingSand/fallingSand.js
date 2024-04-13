@@ -24,7 +24,7 @@ function withinRows(j) {
 }
 
 function setup() {
-  createCanvas(1200, 1000);
+  canvas = createCanvas(1200, 800);
   colorMode(HSB, 360, 255, 255);
   cols = width / w;
   rows = height / w;
@@ -95,7 +95,7 @@ function mouseDragged() {
 
   brushGrid(mouseCol, mouseRow);
 
-  hueValue += 0.5;
+  hueValue += 0.2;
   if (hueValue > 360) {
     hueValue = 1;
   }

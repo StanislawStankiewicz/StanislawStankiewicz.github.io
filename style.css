@@ -1,10 +1,37 @@
-html, body {
+body {
+  background-color: #333;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #303030;
-} 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f4f4f4; /* Add this line to make the text color light */
+}
 
+.main-content {
+  text-align: center;
+}
 
-canvas {
-  display: block;
+h1 {
+  color: #f4f4f4; /* Update this line to make the heading color light */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: #f4f4f4; /* Update this line to make the link color light */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #bbb; /* Update this line to change the link hover color */
 }
