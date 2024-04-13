@@ -11,21 +11,32 @@
 
     <script src="/libraries/p5.min.js"></script>
     <script src="/libraries/p5.sound.min.js"></script>
+    <script src="fourier.js"></script>
   </head>
 
   <body>
     <div class="container">
-    <div id="fourier-canvas"></div>
-      <div class="controls">
-        <input type="number" id="radius" placeholder="Radius">
-        <input type="number" id="period" placeholder="Period">
-        <input type="number" id="phase" placeholder="Phase">
-        <button id="add">Add Circle</button>
-        <button id="remove">Remove Circle</button>
-      </div>
-
-      <a href="/index.html" class="back-button">Back to main page</a>
+        <div class="function">
+            <h1 id="functionTitle">Fourier Series</h1>
+        </div>
+        <div id="fourier-canvas"></div>
+        <div class="controls">
+            <input type="number" id="radius" placeholder="Radius" step="0.1">
+            <input type="number" id="period" placeholder="Period" step="0.1">
+            <input type="number" id="phase" placeholder="Phase" step="0.1">
+            <table>
+                <tr>
+                    <td>
+                        <button id="add">Add</button>
+                    </td>
+                    <td>
+                        <button id="edit">Edit</button>
+                    </td>
+                </tr>
+            </table>
+            <button id="remove">Remove</button>
+        </div>
+        <a href="/index.html" class="back-button">Back to main page</a>
     </div>
-    <script src="fourier.js"></script>
     </body>
 </html>

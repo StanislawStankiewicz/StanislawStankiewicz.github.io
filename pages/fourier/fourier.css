@@ -17,6 +17,15 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
+    overflow: auto;
+}
+
+.function {
+    font-family: 'latinmodern-math', serif;
+    font-style: italic;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the div horizontally */
+    text-align: center; /* Centers the text */
 }
 
 .back-button {
@@ -62,10 +71,14 @@ button:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    position: absolute;
+    bottom: 5%;
 }
 
 .controls > div {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    position: absolute;
+    bottom: 5%;
 }

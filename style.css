@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "latinmodern-math";
+  src: url(/fonts/latinmodern-math.otf);
+}
+
+
 body {
   background-color: #333;
   font-family: Arial, sans-serif;
