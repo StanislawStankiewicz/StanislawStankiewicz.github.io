@@ -1,40 +1,3 @@
-class Circle {
-    constructor(radius, period, phase = 0){
-        // 2*sin(3*x + pi) = Circle(2, 3, 1)
-        this.radius = radius * 75;
-        this.period = period;
-        this.phase = phase * Math.PI;
-    }
-    toString(){
-        let radius = this.radius / 75;
-        let period = this.period;
-        let phase = this.phase / Math.PI;
-        let str = '';
-        if (radius == -1) {
-            str += '-';
-        } else if (radius != 1) {
-            str += radius;
-        }
-        let strPeriod;
-        if (period == 1) {
-            strPeriod = '';
-        } else if (period == -1) {
-            strPeriod = '-';
-        } else {
-            strPeriod = period;
-        }
-
-        str += 'sin(' + strPeriod + 'x';
-        if (phase != 0) {
-            let sign = phase < 0 ? '-' : '+';
-            let strPhase = Math.abs(phase) == 1 ? '' : Math.abs(phase);
-            str += ' ' + sign + ' ' + strPhase + 'π';
-        }
-        str += ')';
-        return str;
-    }
-}
-
 function setFunctionTitle(){
     let title = 'f(x) = ';
     if (circles.length == 0) {
@@ -44,7 +7,6 @@ function setFunctionTitle(){
         let circle = circles[i];
         if (i === selected) {
             title += `<span style="color: rgb(173, 216, 230);">${circle.toString()}</span>`;
-            console.log(circle.toString());
         } else {
             title += circle.toString();
         }
@@ -53,6 +15,13 @@ function setFunctionTitle(){
         }
     }
     document.getElementById('functionTitle').innerHTML = title;
+}
+
+function setPreset(presetClass, num) {
+    console.log(typeof presetClass);
+    circles = presetClass.getCircles(num);
+    selected = circles.length - 1;
+    setFunctionTitle();
 }
 
 function addCircle(radius, period, phase){
@@ -126,17 +95,36 @@ function setup(){
         }
         setFunctionTitle();
     });
+
+    let presets = {
+        "Step Function": StepFunction,
+        "Sawtooth": Sawtooth,
+        "f(x) = x": x,
+    };
+    
+    let presetSelect = document.getElementById('preset');
+    for (let presetName in presets) {
+        let option = document.createElement('option');
+        option.value = presetName;
+        option.text = presetName;
+        presetSelect.add(option);
+    }
+    
+    document.getElementById('set').addEventListener('click', function() {
+        let presetName = presetSelect.value; // Change this line
+        let preset = presets[presetName]; // Add this line
+        let num = parseInt(document.getElementById('preset-num').value);
+        setPreset(preset, num);
+    });
+
+    setPreset(StepFunction, 4);
 }
 
 let selected = 0;
 let time = 0;
 let wave = [];
 
-circles = [];
-
-addCircle(2, 3, 0.5);
-addCircle(1, 5, 0);
-addCircle(-1, -1, -1);
+let circles = [];
 
 function draw(){
     background(48);
@@ -171,7 +159,7 @@ function draw(){
     }
 
     // circles
-    translate(500, 300);
+    translate(500, 400);
 
     let x = 0;
     let y = 0;

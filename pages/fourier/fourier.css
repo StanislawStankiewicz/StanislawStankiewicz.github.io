@@ -82,3 +82,29 @@ button:hover {
     position: absolute;
     bottom: 5%;
 }
+
+.preset-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#preset {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+    appearance: none; /* This removes the default browser styling */
+}
+
+#preset:focus {
+    outline: none; /* This removes the blue outline that appears when the select is focused */
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1); /* This adds a blue glow when the select is focused */
+}
+
+#set {
+    margin-top: 10px;
+}
