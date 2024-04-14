@@ -102,6 +102,8 @@ function setup(){
     let presets = {
         "Step Function": StepFunction,
         "Sawtooth": Sawtooth,
+        "Pulse": Pulse,
+        "Triangle": Triangle,
         "f(x) = x": x,
     };
     
@@ -209,7 +211,7 @@ function draw(){
     }
     endShape();
 
-    time += 0.01;
+    time -= 0.01;
 
     if (wave.length > windowWidth - 750) {
         wave.pop();
