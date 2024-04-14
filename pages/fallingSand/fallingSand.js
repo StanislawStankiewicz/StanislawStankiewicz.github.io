@@ -35,6 +35,22 @@ function setup() {
 
 function draw() {
   background(0);
+
+  if (mouseIsPressed) {
+    let mouseCol = floor(mouseX / w);
+    let mouseRow = floor(mouseY / w);
+
+    if (keyIsDown(SHIFT)) {
+      eraseGrid(mouseCol, mouseRow);
+    } else {
+      brushGrid(mouseCol, mouseRow);
+
+      hueValue += 0.2;
+      if (hueValue > 360) {
+        hueValue = 1;
+      }
+    }
+  }
   
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
@@ -86,21 +102,8 @@ function draw() {
   grid = nextGrid;
 }
 
-function mouseDragged() {
-  let mouseCol = floor(mouseX / w);
-  let mouseRow = floor(mouseY / w);
-
-  if (keyIsDown(SHIFT)) {
-    eraseGrid(mouseCol, mouseRow);
-    return;
-  }
-
-  brushGrid(mouseCol, mouseRow);
-
-  hueValue += 0.2;
-  if (hueValue > 360) {
-    hueValue = 1;
-  }
+function mouseClicked() {
+  
 }
 
 function brushGrid(mouseCol, mouseRow) {
