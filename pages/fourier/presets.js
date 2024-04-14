@@ -40,7 +40,7 @@ class x {
         return circles;
     }
     static _getCircle(i) {
-        let radius = 2 * (i % 2 == 0 ? 1 : -1) / i;
+        let radius = 2 * (i % 2 == 0 ? -1 : 1) / i;
         let period = i;
         let phase = 0;
         return new Circle(radius, period, phase);

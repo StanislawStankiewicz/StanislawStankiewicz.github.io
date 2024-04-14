@@ -18,7 +18,6 @@ function setFunctionTitle(){
 }
 
 function setPreset(presetClass, num) {
-    console.log(typeof presetClass);
     circles = presetClass.getCircles(num);
     selected = circles.length - 1;
     setFunctionTitle();
@@ -37,6 +36,10 @@ function windowResized(){
 }
 
 function mouseClicked(){
+    if (!viewSelect) {
+        return;
+    }
+
     let selectionSize = windowHeight / 10;
     let x = mouseX;
     let y = mouseY;
@@ -109,10 +112,14 @@ function setup(){
         option.text = presetName;
         presetSelect.add(option);
     }
+
+    document.getElementById('toggle-select').addEventListener('click', function() {
+        viewSelect = !viewSelect;
+    });
     
     document.getElementById('set').addEventListener('click', function() {
-        let presetName = presetSelect.value; // Change this line
-        let preset = presets[presetName]; // Add this line
+        let presetName = presetSelect.value;
+        let preset = presets[presetName];
         let num = parseInt(document.getElementById('preset-num').value);
         setPreset(preset, num);
     });
@@ -125,37 +132,40 @@ let time = 0;
 let wave = [];
 
 let circles = [];
+let viewSelect = true;
 
 function draw(){
     background(48);
     // selection menu
-    let selectionSize = windowHeight / 10;
-    for (let i = 0; i < circles.length; i++) {
-        circle = circles[i];
+    if (viewSelect) {
+        let selectionSize = windowHeight / 10;
+        for (let i = 0; i < circles.length; i++) {
+            circle = circles[i];
 
-        let col = selectionSize * Math.floor(i / 10);
-        let row = selectionSize * (i % 10);
+            let col = selectionSize * Math.floor(i / 10);
+            let row = selectionSize * (i % 10);
 
-        let period = circle.period;
-        let phase = circle.phase;
-        let radius = selectionSize * 0.3;
-        if (i == selected) {
-            stroke(173, 216, 230);
-            strokeWeight(2);
-        }
-        square(col, row, selectionSize);
-        ellipse(selectionSize / 2 + col, selectionSize / 2 + row, radius * 2);
+            let period = circle.period;
+            let phase = circle.phase;
+            let radius = selectionSize * 0.3;
+            if (i == selected) {
+                stroke(173, 216, 230);
+                strokeWeight(4);
+            }
+            square(col, row, selectionSize);
+            ellipse(selectionSize / 2 + col, selectionSize / 2 + row, radius * 2);
 
-        let x = selectionSize / 2 + radius * cos(period * time + phase);
-        let y = selectionSize / 2 + radius * sin(period * time + phase);
+            let x = selectionSize / 2 + radius * cos(period * time + phase);
+            let y = selectionSize / 2 + radius * sin(period * time + phase);
 
-        stroke(255);
-        
-        strokeWeight(1);
-        line(selectionSize / 2 + col, selectionSize / 2 + row, x + col, y + row);
-        fill(255);
-        ellipse(x + col, y + row, selectionSize * 0.04);
-        noFill();
+            stroke(255);
+            
+            strokeWeight(1);
+            line(selectionSize / 2 + col, selectionSize / 2 + row, x + col, y + row);
+            fill(255);
+            ellipse(x + col, y + row, selectionSize * 0.04);
+            noFill();
+    }
     }
 
     // circles
@@ -187,7 +197,7 @@ function draw(){
         strokeWeight(1);
         stroke(255);
         line(prevx, prevy, x, y);
-        ellipse(x, y, 8);
+        ellipse(x, y, 0.11 * radius);
     }
     wave.unshift(y);
     translate(250, 0);
@@ -199,7 +209,7 @@ function draw(){
     }
     endShape();
 
-    time -= 0.01;
+    time += 0.01;
 
     if (wave.length > windowWidth - 750) {
         wave.pop();
