@@ -41,3 +41,17 @@ nav ul li a {
 nav ul li a:hover {
   color: #bbb; /* Update this line to change the link hover color */
 }
+
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  color: #bbb;
+}

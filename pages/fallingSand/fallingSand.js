@@ -25,6 +25,8 @@ function withinRows(j) {
 
 function setup() {
   canvas = createCanvas(1200, 800);
+  canvas.id('sand-canvas');
+  canvas.parent('sand-canvas');
   colorMode(HSB, 360, 255, 255);
   cols = width / w;
   rows = height / w;

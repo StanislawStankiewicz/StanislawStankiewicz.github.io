@@ -147,9 +147,9 @@ function draw(){
             let col = selectionSize * Math.floor(i / 10);
             let row = selectionSize * (i % 10);
 
+            let radius = Math.sign(circle.radius) * selectionSize * 0.3;
             let period = circle.period;
             let phase = circle.phase;
-            let radius = selectionSize * 0.3;
             if (i == selected) {
                 stroke(173, 216, 230);
                 strokeWeight(4);
@@ -167,7 +167,7 @@ function draw(){
             fill(255);
             ellipse(x + col, y + row, selectionSize * 0.04);
             noFill();
-    }
+        }
     }
 
     // circles

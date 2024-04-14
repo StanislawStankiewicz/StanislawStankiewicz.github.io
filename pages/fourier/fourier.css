@@ -8,6 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     color: #f4f4f4;
+    overflow: hidden;
 }
 
 .container {
@@ -26,20 +27,6 @@ body {
     width: 80%; /* Adjust as needed */
     margin: 0 auto; /* Centers the div horizontally */
     text-align: center; /* Centers the text */
-}
-
-.back-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.back-button:hover {
-    color: #bbb;
 }
 
 input[type="number"] {
