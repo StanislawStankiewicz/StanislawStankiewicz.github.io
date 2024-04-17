@@ -51,6 +51,13 @@ function setWalls() {
         let y2 = random(height);
         walls[i] = new Boundary(x1, y1, x2, y2);
     }
+    for (let i = 0; i < 2; i++) {
+        let x1 = random(width);
+        let x2 = random(width);
+        let y1 = random(height);
+        let y2 = random(height);
+        walls[i] = new Boundary(x1, y1, x2, y2, true);
+    }
     walls.push(new Boundary(0, 0, width, 0));
     walls.push(new Boundary(width, 0, width, height));
     walls.push(new Boundary(width, height, 0, height));

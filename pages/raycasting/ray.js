@@ -18,7 +18,50 @@ class Ray {
         this.dir.normalize();
     }
 
-    cast(wall) {
+    cast(walls, depth = 0) {
+        let closest = null;
+        let closestWall = null;
+        let record = Infinity;
+        for (let wall of walls) {
+            const pt = this.look(wall);
+            if (pt) {
+                const d = p5.Vector.dist(this.pos, pt);
+                if (d < record) {
+                    record = d;
+                    closest = pt;
+                    closestWall = wall;
+                }
+            }
+        }
+        if (closest) {
+            stroke(255, 100);
+            line(this.pos.x, this.pos.y, closest.x, closest.y);
+            if (closestWall.isMirror && depth < 10) { // Limit recursion depth
+                let wallDir = p5.Vector.sub(closestWall.b, closestWall.a);
+                wallDir.normalize();
+            
+                let normal = createVector(-wallDir.y, wallDir.x); // Perpendicular to wall
+            
+                // Flip normal to always be facing the incoming ray
+                let dot = p5.Vector.dot(this.dir, normal);
+                if (dot > 0) {
+                    normal.mult(-1);
+                }
+            
+                let d = p5.Vector.dot(this.dir, normal);
+                let reflected = p5.Vector.sub(this.dir, p5.Vector.mult(normal, 2 * d));
+            
+                // Add a small offset to the starting position of the reflected ray
+                let offset = p5.Vector.mult(reflected, 0.01);
+                let start = p5.Vector.add(closest, offset);
+            
+                let reflectedRay = new Ray(start, reflected.heading());
+                reflectedRay.cast(walls, depth + 1); // Increment depth
+            }
+        }
+    }
+
+    look(wall) {
         let x1 = wall.a.x;
         let y1 = wall.a.y;
         let x2 = wall.b.x;

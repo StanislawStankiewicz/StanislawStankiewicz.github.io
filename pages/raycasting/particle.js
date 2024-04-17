@@ -21,22 +21,15 @@ class Particle {
 
     look(walls) {
         for (let ray of this.rays) {
-            let closest = null;
-            let record = Infinity;
-            for (let wall of walls) {
-                const pt = ray.cast(wall);
-                if (pt) {
-                    const d = p5.Vector.dist(this.pos, pt);
-                    if (d < record) {
-                        record = d;
-                        closest = pt;
-                    }
-                }
-            }
-            if (closest) {
-                stroke(255, 100);
-                line(this.pos.x, this.pos.y, closest.x, closest.y);
-            }
+            ray.cast(walls);
         }
+    }
+
+    calculateReflectedAngle(A, B, dir) {
+        let angle = atan2(B.y - A.y, B.x - A.x);
+        let normal = createVector(-sin(angle), cos(angle));
+        let d = p5.Vector.dot(dir, normal);
+        let reflected = p5.Vector.sub(dir, p5.Vector.mult(normal, 2 * d));
+        return reflected.heading();
     }
 }

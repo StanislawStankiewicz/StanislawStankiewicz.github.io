@@ -56,5 +56,5 @@ class Caster {
     
         const perpendicularDist = Math.abs((x2 - x1) * (y1 - py) - (x1 - px) * (y2 - y1)) / lineLength;
         return perpendicularDist;
-    }    
+    }
 }
