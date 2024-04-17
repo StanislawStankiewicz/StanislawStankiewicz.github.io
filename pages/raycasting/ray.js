@@ -36,7 +36,7 @@ class Ray {
         if (closest) {
             stroke(255, 100);
             line(this.pos.x, this.pos.y, closest.x, closest.y);
-            if (closestWall.isMirror && depth < 10) { // Limit recursion depth
+            if (closestWall.isMirror) { // Limit recursion depth
                 let wallDir = p5.Vector.sub(closestWall.b, closestWall.a);
                 wallDir.normalize();
             
