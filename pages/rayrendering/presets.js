@@ -20,4 +20,4 @@ class Random {
         }
         return walls;
     }
-}dw
+}
