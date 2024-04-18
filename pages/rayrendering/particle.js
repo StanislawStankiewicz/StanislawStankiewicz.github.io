@@ -24,6 +24,12 @@ class Particle {
         this.pos.add(vel);
     }
 
+    moveSideways(amt) {
+        const vel = p5.Vector.fromAngle(this.heading + HALF_PI);
+        vel.setMag(amt);
+        this.pos.add(vel);
+    }
+
     update(x, y) {
         this.pos.set(x, y);
     }

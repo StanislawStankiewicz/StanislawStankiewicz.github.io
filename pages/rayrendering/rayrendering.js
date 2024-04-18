@@ -32,6 +32,13 @@ function draw() {
     if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
         particle.move(-1);
     }
+    // q to move sideways to left, e to move sideways to right
+    if (keyIsDown(81)) {
+        particle.moveSideways(-1);
+    }
+    if (keyIsDown(69)) {
+        particle.moveSideways(1);
+    }
 
     background(0);
 
