@@ -23,7 +23,33 @@
       <div id="raycasting-canvas"></div>
       <a href="/index.html" class="back-button">Back to main page</a>
       <div class="controls">
-        <button id="walls">New walls</button>
+        <table>
+          <tr>
+            <td>
+                <button id="walls">New walls</button>
+            </td>
+            <td>
+                <div class="preset-container">
+                    <select id="preset">
+                        <!-- Options will be added dynamically -->
+                    </select>
+                    <button id="set">Set</button>
+                </div>
+            </td>
+            <td>
+                <input type="range" min="1" max="100" value="1" step="any" id="a-slider">
+            </td>
+            <td>
+                <input type="range" min="-600" max="600" value="0" step="any" id="p-slider">
+            </td>
+            <td>
+                <input type="range" min="0" max="800" value="0" step="any" id="q-slider">
+            </td>
+            <td>
+              <input type="range" min="0" max="800" value="800" step="any" id="cut-slider">
+          </td>
+        </tr>
+      </table>
       </div>
   </body>
 </html>

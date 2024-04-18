@@ -3,15 +3,88 @@ let particles = [];
 let ray;
 let particle;
 
+let a = 1/30;
+let p = 0;
+let q = 0;
+let cut = 800;
+
 function setup() {
     canvas = createCanvas(1200, 800);
     canvas.parent('raycasting-canvas');
 
-    document.getElementById('walls').addEventListener('click', function() {
-        setWalls();
+    document.getElementById('set').addEventListener('click', function() {
+        let preset = document.getElementById('preset').value;
+        if (preset === 'Parabola') {
+            walls = Parabola.getWalls(a, p, q, cut);
+            addBorders();
+            return;
+        }
+        walls = Random.getWalls();
+        addBorders();
     });
 
-    setWalls();
+    document.getElementById('a-slider').addEventListener('input', function() {
+        if (document.getElementById('preset').value !== 'Parabola') {
+            return;
+        }
+        let minp = 0.01;
+        let maxp = 1.01;
+    
+        let minv = Math.log(minp);
+        let maxv = Math.log(maxp);
+    
+        // calculate adjustment factor
+        let scale = (maxv-minv) / (100-1);
+    
+        a = Math.exp(minv + scale*(this.value-1));
+        walls = Parabola.getWalls(a, p, q, cut);
+        addBorders();
+    });
+    
+    document.getElementById('p-slider').addEventListener('input', function() {
+        if (document.getElementById('preset').value !== 'Parabola') {
+            return;
+        }
+        p = parseFloat(this.value);
+        walls = Parabola.getWalls(a, p, q, cut);
+        addBorders();
+    });
+    
+    document.getElementById('q-slider').addEventListener('input', function() {
+        if (document.getElementById('preset').value !== 'Parabola') {
+            return;
+        }
+        q = parseFloat(this.value);
+        walls = Parabola.getWalls(a, p, q, cut);
+        addBorders();
+    });
+
+    document.getElementById('cut-slider').addEventListener('input', function() {
+        if (document.getElementById('preset').value !== 'Parabola') {
+            return;
+        }
+        cut = parseFloat(this.value);
+        walls = Parabola.getWalls(a, p, q, cut);
+        addBorders();
+    });
+
+    let presets = {
+        "Random": Random,
+        "Parabola": Parabola,
+    };
+    
+    let presetSelect = document.getElementById('preset');
+    for (let presetName in presets) {
+        let option = document.createElement('option');
+        option.value = presetName;
+        option.text = presetName;
+        presetSelect.add(option);
+    }
+
+    // setWalls();
+    walls = Random.getWalls();
+    addBorders();
+
     particle = new Particle();
 }
 
@@ -41,23 +114,7 @@ function mouseClicked() {
     particles.push(part);
 }
 
-function setWalls() {
-    walls = [];
-    particles = [];
-    for (let i = 0; i < 5; i++) {
-        let x1 = random(width);
-        let x2 = random(width);
-        let y1 = random(height);
-        let y2 = random(height);
-        walls[i] = new Boundary(x1, y1, x2, y2);
-    }
-    for (let i = 0; i < 2; i++) {
-        let x1 = random(width);
-        let x2 = random(width);
-        let y1 = random(height);
-        let y2 = random(height);
-        walls[i] = new Boundary(x1, y1, x2, y2, true);
-    }
+function addBorders() {
     walls.push(new Boundary(0, 0, width, 0));
     walls.push(new Boundary(width, 0, width, height));
     walls.push(new Boundary(width, height, 0, height));
