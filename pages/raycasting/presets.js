@@ -42,7 +42,6 @@ class Parabola {
 class Random {
     static getWalls() {
         walls = [];
-        particles = [];
         for (let i = 0; i < 5; i++) {
             let x1 = random(width);
             let x2 = random(width);

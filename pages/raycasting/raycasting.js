@@ -14,6 +14,7 @@ function setup() {
 
     document.getElementById('set').addEventListener('click', function() {
         let preset = document.getElementById('preset').value;
+        particles = [];
         if (preset === 'Parabola') {
             walls = Parabola.getWalls(a, p, q, cut);
             addBorders();
@@ -24,9 +25,6 @@ function setup() {
     });
 
     document.getElementById('a-slider').addEventListener('input', function() {
-        if (document.getElementById('preset').value !== 'Parabola') {
-            return;
-        }
         let minp = 0.01;
         let maxp = 1.01;
     
@@ -37,33 +35,36 @@ function setup() {
         let scale = (maxv-minv) / (100-1);
     
         a = Math.exp(minv + scale*(this.value-1));
+        if (document.getElementById('preset').value !== 'Parabola') {
+            return;
+        }
         walls = Parabola.getWalls(a, p, q, cut);
         addBorders();
     });
     
     document.getElementById('p-slider').addEventListener('input', function() {
+        p = parseFloat(this.value);
         if (document.getElementById('preset').value !== 'Parabola') {
             return;
         }
-        p = parseFloat(this.value);
         walls = Parabola.getWalls(a, p, q, cut);
         addBorders();
     });
     
     document.getElementById('q-slider').addEventListener('input', function() {
+        q = parseFloat(this.value);
         if (document.getElementById('preset').value !== 'Parabola') {
             return;
         }
-        q = parseFloat(this.value);
         walls = Parabola.getWalls(a, p, q, cut);
         addBorders();
     });
 
     document.getElementById('cut-slider').addEventListener('input', function() {
+        cut = parseFloat(this.value);
         if (document.getElementById('preset').value !== 'Parabola') {
             return;
         }
-        cut = parseFloat(this.value);
         walls = Parabola.getWalls(a, p, q, cut);
         addBorders();
     });
@@ -119,4 +120,10 @@ function addBorders() {
     walls.push(new Boundary(width, 0, width, height));
     walls.push(new Boundary(width, height, 0, height));
     walls.push(new Boundary(0, height, 0, 0));
+}
+
+function buttonPressed() {
+    if (key === 'r') {
+        particles = [];
+    }
 }
