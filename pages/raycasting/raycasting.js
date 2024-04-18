@@ -122,7 +122,8 @@ function addBorders() {
     walls.push(new Boundary(0, height, 0, 0));
 }
 
-function buttonPressed() {
+function keyPressed() {
+    console.log(key);
     if (key === 'r') {
         particles = [];
     }
