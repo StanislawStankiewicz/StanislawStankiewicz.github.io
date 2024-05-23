@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.d44c420c.css",
-    "main.js": "/react-gh-pages/static/js/main.e27b81bf.js",
-    "static/js/453.2aac3b00.chunk.js": "/react-gh-pages/static/js/453.2aac3b00.chunk.js",
-    "static/media/raytracing.png": "/react-gh-pages/static/media/raytracing.74e0530b7f1202dd5fce.png",
-    "static/media/falling-sand.png": "/react-gh-pages/static/media/falling-sand.5466ca104d5dce1f4212.png",
-    "static/media/raymarching.png": "/react-gh-pages/static/media/raymarching.214f263ef7db73650cb2.png",
-    "static/media/fourier-series.png": "/react-gh-pages/static/media/fourier-series.9884552e53cedc6b8a5b.png",
-    "static/media/rt-rendering.png": "/react-gh-pages/static/media/rt-rendering.e848aa6ae816973d8404.png",
-    "static/media/game-of-life.png": "/react-gh-pages/static/media/game-of-life.56ee2860f2e58fa48c63.png",
-    "static/media/react.svg": "/react-gh-pages/static/media/react.e4437aca768345220295e23854ebc6ad.svg",
-    "static/media/p5.svg": "/react-gh-pages/static/media/p5.d8ca1ca10be6b1cbb0d2f0d598bd5b0a.svg",
-    "static/media/js.svg": "/react-gh-pages/static/media/js.5c55746f5cf8f4daf92e08fad965fc89.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.d44c420c.css.map": "/react-gh-pages/static/css/main.d44c420c.css.map",
-    "main.e27b81bf.js.map": "/react-gh-pages/static/js/main.e27b81bf.js.map",
-    "453.2aac3b00.chunk.js.map": "/react-gh-pages/static/js/453.2aac3b00.chunk.js.map"
+    "main.css": "/static/css/main.d44c420c.css",
+    "main.js": "/static/js/main.8eda2458.js",
+    "static/js/453.2aac3b00.chunk.js": "/static/js/453.2aac3b00.chunk.js",
+    "static/media/raytracing.png": "/static/media/raytracing.74e0530b7f1202dd5fce.png",
+    "static/media/falling-sand.png": "/static/media/falling-sand.5466ca104d5dce1f4212.png",
+    "static/media/raymarching.png": "/static/media/raymarching.214f263ef7db73650cb2.png",
+    "static/media/fourier-series.png": "/static/media/fourier-series.9884552e53cedc6b8a5b.png",
+    "static/media/rt-rendering.png": "/static/media/rt-rendering.e848aa6ae816973d8404.png",
+    "static/media/game-of-life.png": "/static/media/game-of-life.56ee2860f2e58fa48c63.png",
+    "static/media/react.svg": "/static/media/react.e4437aca768345220295e23854ebc6ad.svg",
+    "static/media/p5.svg": "/static/media/p5.75194ae60efaec55b47596974c45d245.svg",
+    "static/media/js.svg": "/static/media/js.5c55746f5cf8f4daf92e08fad965fc89.svg",
+    "index.html": "/index.html",
+    "main.d44c420c.css.map": "/static/css/main.d44c420c.css.map",
+    "main.8eda2458.js.map": "/static/js/main.8eda2458.js.map",
+    "453.2aac3b00.chunk.js.map": "/static/js/453.2aac3b00.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d44c420c.css",
-    "static/js/main.e27b81bf.js"
+    "static/js/main.8eda2458.js"
   ]
 }
