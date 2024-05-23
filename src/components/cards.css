@@ -1,59 +1,57 @@
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 60vw;
-  gap: 8px;
+  display: grid;
+  justify-items: center;
+  min-width: 60vw;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 90vw;
+}
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80vw;
+  }
 }
 
-.cards:hover > .card::after {
-  opacity: 1;
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 60vw;
+  }
 }
-
 .card {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   cursor: pointer;
   display: flex;
-  height: 260px;
   flex-direction: column;
   position: relative;
-  width: 300px;
+  width: 100%;
   transition: 500ms;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   text-shadow: 0 0 100px white;
 }
-
-.card:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .card-header {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  margin-top: 12vh;
   padding: 20px;
-  position: absolute;
-  top: 125px;
   font-size: 100%;
   transition: 500ms;
   color: white;
+  z-index: 1;
 }
-
 .card-header h2 {
   font-weight: 600;
 }
-
 .card-header p {
   font-weight: 600;
   font-size: 80%;
 }
-
 .card:hover .card-header {
   transform: translateY(-5px);
 }
-
 .card-image img {
   object-fit: cover;
   width: 100%;
@@ -62,12 +60,10 @@
   transition: 500ms;
   position: absolute;
 }
-
 .card:hover .card-image img {
   transform: scale(1.1);
   opacity: 1;
 }
-
 .card-icons {
   display: flex;
   flex-wrap: wrap;
@@ -77,9 +73,9 @@
   margin-left: auto;
   opacity: 1;
   border-radius: 0 0 0 10px;
+  max-width: 40%;
   z-index: 1;
 }
-
 .card-icon {
   width: 20px;
   height: 20px;
