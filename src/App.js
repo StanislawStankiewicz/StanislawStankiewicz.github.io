@@ -72,6 +72,9 @@ export default function App() {
           </header>
           <Cards content={p5Projects} iconsClass="blue" />
         </section>
+
+        <div className="spacer layer1"></div>
+
         <section className="dark">
           <header>
             <h1>Kaggle Projects</h1>
@@ -79,6 +82,9 @@ export default function App() {
           </header>
           <Cards content={p5Projects} iconsClass="dark" />
         </section>
+
+        <div className="spacer layer2"></div>
+
         <section className="red">
           <header>
             <h1>JavaScript mini-projects</h1>
