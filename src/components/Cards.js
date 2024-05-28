@@ -1,6 +1,5 @@
 import React from "react";
 import "./cards.css";
-import { ReactComponent as JSIcon } from "./icons/js.svg";
 
 export default function Cards({ content, iconsClass }) {
   return (
