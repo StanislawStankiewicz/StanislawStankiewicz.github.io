@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(48, 48, 48);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f4f4f4;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.function {
+    font-family: 'latinmodern-math', serif;
+    font-style: italic;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the div horizontally */
+    text-align: center; /* Centers the text */
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #bbb;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+
+.controls > div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+
+.preset-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#preset {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+    appearance: none; /* This removes the default browser styling */
+}
+
+#preset:focus {
+    outline: none; /* This removes the blue outline that appears when the select is focused */
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1); /* This adds a blue glow when the select is focused */
+}
+
+#set {
+    margin-top: 10px;
+}

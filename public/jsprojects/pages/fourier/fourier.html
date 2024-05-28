@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fourier</title>
+
+    <link rel="stylesheet" type="text/css" href="/jsprojects/style.css" />
+    <link rel="stylesheet" type="text/css" href="fourier.css" />
+
+    <script src="/jsprojects/p5.min.js"></script>
+    <script src="circle.js"></script>
+    <script src="presets.js"></script>
+    <script src="fourier.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="function">
+        <h1 id="functionTitle">Fourier Series</h1>
+      </div>
+      <div id="fourier-canvas"></div>
+      <div class="controls">
+        <input type="number" id="radius" placeholder="Radius" step="0.1" />
+        <input type="number" id="period" placeholder="Period" step="0.1" />
+        <input type="number" id="phase" placeholder="Phase" step="0.1" />
+        <table>
+          <tr>
+            <td>
+              <button id="add">Add</button>
+            </td>
+            <td>
+              <button id="edit">Edit</button>
+            </td>
+          </tr>
+        </table>
+        <button id="remove">Remove</button>
+        <button
+          id="toggle-select"
+          style="position: fixed; top: 10px; right: 10px"
+        >
+          Toggle Select
+        </button>
+        <button
+          id="toggle-title"
+          style="position: fixed; top: 50px; right: 10px"
+        >
+          Toggle Title
+        </button>
+        <script>
+          document
+            .getElementById("toggle-title")
+            .addEventListener("click", function () {
+              let title = document.getElementById("functionTitle");
+              if (title.style.display === "none") {
+                title.style.display = "block";
+              } else {
+                title.style.display = "none";
+              }
+            });
+        </script>
+      </div>
+      <a href="/" class="back-button">Back to main page</a>
+      <div class="preset-container">
+        <select id="preset">
+          <!-- Options will be added dynamically -->
+        </select>
+        <input
+          id="preset-num"
+          type="number"
+          min="1"
+          max="100"
+          step="1"
+          value="4"
+        />
+        <button id="set">Set</button>
+      </div>
+    </div>
+  </body>
+</html>

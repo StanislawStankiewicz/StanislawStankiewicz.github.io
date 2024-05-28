@@ -25,6 +25,7 @@ section:first-child {
 
 section:last-child {
   padding-bottom: 100px;
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.5);
 }
 
 .sub-header {
@@ -136,6 +137,7 @@ section:last-child {
   overflow: hidden;
   background: linear-gradient(to right, #981ccc, #7824d4);
   transition: 500ms;
+  text-decoration: none;
 }
 
 .contactItem:hover {
@@ -151,4 +153,16 @@ section:last-child {
   height: 26px;
   fill: white;
   margin-right: 10px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: #202731;
+}
+
+footer p {
+  font-size: 80%;
+  opacity: 0.5;
 }

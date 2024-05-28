@@ -13,8 +13,9 @@ export default function Cards({ content, iconsClass }) {
 
 function Card({ content, iconsClass }) {
   const { title, description, image, link, icons } = content;
+
   return (
-    <div className="card">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="card">
       <div className="card-image">
         <img src={image} alt="Avatar" />
       </div>
@@ -27,6 +28,6 @@ function Card({ content, iconsClass }) {
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
-    </div>
+    </a>
   );
 }

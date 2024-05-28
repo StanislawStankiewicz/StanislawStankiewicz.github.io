@@ -1,7 +1,7 @@
 import "./App.css";
 import Cards from "./components/Cards.js";
 import Header from "./components/Header.js";
-import { p5Projects, githubProjects } from "./projects.js";
+import { githubProjects, kaggleProjects, p5Projects } from "./projects.js";
 
 import { ReactComponent as GithubIcon } from "./components/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "./components/icons/linkedin.svg";
@@ -31,14 +31,14 @@ export default function App() {
               <h2>Contact</h2>
               <ul className="contactList">
                 <ContactItem
-                  link="mailto:s.stankievitz@gmail.com"
-                  Icon={MailIcon}
-                  text="s.stankievitz@gmail.com"
-                />
-                <ContactItem
                   link="https://github.com/StanislawStankiewicz"
                   Icon={GithubIcon}
                   text="github.com/StanislawStankiewicz"
+                />
+                <ContactItem
+                  link="mailto:s.stankievitz@gmail.com"
+                  Icon={MailIcon}
+                  text="s.stankievitz@gmail.com"
                 />
                 <ContactItem
                   link="https://www.kaggle.com/stanisawstankiewicz"
@@ -69,7 +69,7 @@ export default function App() {
           id="kaggle"
           title="Kaggle Projects"
           description="All machine learning projects I did."
-          projects={p5Projects}
+          projects={kaggleProjects}
           backgroundClass="dark"
           spacerClass="spacer layer3"
         />
@@ -83,7 +83,7 @@ export default function App() {
         />
       </main>
       <footer>
-        <p>Created by Stanisław Stankiewicz</p>
+        <p>Created by Stanisław Stankiewicz 2024</p>
       </footer>
     </>
   );
@@ -110,14 +110,15 @@ function Showcase({
 }
 
 function ContactItem({ link, Icon, text }) {
-  function handleClick() {
-    window.open(link, "_blank");
-  }
-
   return (
-    <li className="contactItem" onClick={handleClick}>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contactItem"
+    >
       <Icon className="icon" />
       {text}
-    </li>
+    </a>
   );
 }
