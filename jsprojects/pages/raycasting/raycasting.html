@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>2D Raycasting</title>
+
+        <link rel="stylesheet" type="text/css" href="/jsprojects/style.css">
+        <link rel="stylesheet" type="text/css" href="raycasting.css">
+
+        <script src="/jsprojects/p5.min.js"></script>
+        <script src="/jsprojects/pages/raycasting/boundary.js"></script>
+        <script src="/jsprojects/pages/raycasting/ray.js"></script>
+        <script src="/jsprojects/pages/raycasting/particle.js"></script>
+        <script src="/jsprojects/pages/raycasting/presets.js"></script>
+        <script src="raycasting.js"></script>
+    </head>
+
+  <body>
+    <div class="container">
+      <div id="raycasting-canvas"></div>
+      <a href="/" class="back-button">Back to main page</a>
+      <div class="controls">
+        <table>
+          <tr>
+            <td>
+                <div class="preset-container">
+                    <select id="preset">
+                        <!-- Options will be added dynamically -->
+                    </select>
+                    <button id="set">Set</button>
+                </div>
+            </td>
+            <td>
+                <input type="range" min="1" max="100" value="1" step="any" id="a-slider">
+            </td>
+            <td>
+                <input type="range" min="-600" max="600" value="0" step="any" id="p-slider">
+            </td>
+            <td>
+                <input type="range" min="0" max="800" value="0" step="any" id="q-slider">
+            </td>
+            <td>
+              <input type="range" min="0" max="800" value="800" step="any" id="cut-slider">
+          </td>
+        </tr>
+      </table>
+      </div>
+  </body>
+</html>

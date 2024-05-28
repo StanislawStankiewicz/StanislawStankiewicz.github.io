@@ -1,0 +1,47 @@
+.back-button {
+    position: fixed;
+    top: 0;
+    left: 10px;
+}
+
+.pause-button {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+}
+
+#raycasting-canvas {
+    width: 100%;
+    height: 80%;
+    z-index: 1;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.controls button {
+    margin-bottom: 10px;
+}
+
+#preset {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+    appearance: none; /* This removes the default browser styling */
+}
+
+#preset:focus {
+    outline: none; /* This removes the blue outline that appears when the select is focused */
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1); /* This adds a blue glow when the select is focused */
+}
