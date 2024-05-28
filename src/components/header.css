@@ -38,7 +38,7 @@
   transition: 300ms;
 }
 
-.sections p:hover {
+li:hover p {
   color: #fff;
 }
 
