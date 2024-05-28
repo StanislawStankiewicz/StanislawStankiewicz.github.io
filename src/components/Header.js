@@ -56,6 +56,7 @@ export default function Header({ children, className, sections = [] }) {
       <ul className="sections">
         {sections.map((section) => (
           <li
+            className="sectionItem"
             key={section}
             onClick={() => {
               const id = section.toLowerCase().replace(/\s+/g, "");

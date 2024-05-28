@@ -101,7 +101,7 @@ export const githubProjects = {
   twitchPointsList: {
     title: "Twitch Points List",
     description:
-      "A simple python application that allows tracking your Twitch Points across multiple channels, which plots the point history.",
+      "A simple python application that allows tracking your Twitch Points across multiple channels and plots the point history.",
     image: myWebsiteImage,
     link: "https://example.com",
     icons: [PythonIcon],
