@@ -8,40 +8,6 @@ body {
   height: 100vh;
   margin: 0px;
   padding: 0px;
-  padding-top: 60px;
-}
-
-.main-header {
-  padding: 20px 0;
-  background: #202731;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 90vw;
-}
-
-@media (min-width: 700px) {
-  nav {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 80vw;
-  }
-}
-@media (min-width: 1200px) {
-  nav {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 60vw;
-  }
 }
 
 section {

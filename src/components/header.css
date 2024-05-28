@@ -1,0 +1,60 @@
+.main-header {
+  padding: 10px 0;
+  background: #202731;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 90vw;
+}
+
+@media (min-width: 700px) {
+  .sections {
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sections {
+    max-width: 60vw;
+  }
+}
+
+.sections p {
+  font-weight: 800;
+  padding: 10px;
+  color: #bbb;
+  transition: 300ms;
+}
+
+.sections p:hover {
+  color: #fff;
+}
+
+.sections p.selected {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
