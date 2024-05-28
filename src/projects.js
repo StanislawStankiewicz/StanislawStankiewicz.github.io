@@ -114,7 +114,7 @@ export const p5Projects = {
     description:
       "A falling sand simulation. Drag the mouse to draw elements and watch them interact. Press Shift to remove the sand.",
     image: fallingSandImage,
-    link: "/jsprojects/pages/fallingSand/fallingsand.html",
+    link: "/jsprojects/pages/fallingSand/fallingSand.html",
     icons: [P5Icon, JSIcon],
   },
   fourierSeries: {
