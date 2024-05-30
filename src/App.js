@@ -4,9 +4,10 @@ import Header from "./components/Header.js";
 import { githubProjects, kaggleProjects, p5Projects } from "./projects.js";
 
 import { ReactComponent as GithubIcon } from "./components/icons/github.svg";
+import { ReactComponent as MailIcon } from "./components/icons/mail.svg";
 import { ReactComponent as LinkedinIcon } from "./components/icons/linkedin.svg";
 import { ReactComponent as KaggleIcon } from "./components/icons/kaggle.svg";
-import { ReactComponent as MailIcon } from "./components/icons/mail.svg";
+import { ReactComponent as LeetcodeIcon } from "./components/icons/leetcode.svg";
 
 export default function App() {
   return (
@@ -31,24 +32,29 @@ export default function App() {
               <h2>Contact</h2>
               <ul className="contactList">
                 <ContactItem
-                  link="https://github.com/StanislawStankiewicz"
-                  Icon={GithubIcon}
-                  text="github.com/StanislawStankiewicz"
-                />
-                <ContactItem
                   link="mailto:s.stankievitz@gmail.com"
                   Icon={MailIcon}
                   text="s.stankievitz@gmail.com"
                 />
                 <ContactItem
+                  link="https://github.com/StanislawStankiewicz"
+                  Icon={GithubIcon}
+                  text="GitHub"
+                />
+                <ContactItem
                   link="https://www.kaggle.com/stanisawstankiewicz"
                   Icon={KaggleIcon}
-                  text="kaggle.com/stanisawstankiewicz"
+                  text="Kaggle"
                 />
                 <ContactItem
                   link="https://www.linkedin.com/in/stanisław-stankiewicz-30b56b308/"
                   Icon={LinkedinIcon}
-                  text="linkedin.com/in/stanislaw-stankiewicz"
+                  text="LinkedIn"
+                />
+                <ContactItem
+                  link="https://leetcode.com/u/user2299F/"
+                  Icon={LeetcodeIcon}
+                  text="Leetcode"
                 />
               </ul>
             </div>
@@ -110,6 +116,8 @@ function Showcase({
 }
 
 function ContactItem({ link, Icon, text }) {
+  text = text.replace(/\//g, "/\u200B");
+  text = text.replace(/@/g, "@\u200B");
   return (
     <a
       href={link}

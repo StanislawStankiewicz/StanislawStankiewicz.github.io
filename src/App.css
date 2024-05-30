@@ -34,7 +34,7 @@ section:last-child {
   font-size: 150%;
   padding-bottom: 50px;
   z-index: 1;
-  max-width: 60vw;
+  max-width: 80vw;
 }
 
 @media (min-width: 700px) {
@@ -97,7 +97,7 @@ section:last-child {
   min-height: 120vh;
 }
 
-.welcome-page h1 {
+.welcome-page > h1 {
   color: white;
   text-align: center;
   font-size: 300%;
@@ -105,7 +105,7 @@ section:last-child {
   z-index: 1;
 }
 
-.contact h2 {
+.contact > h2 {
   color: white;
   text-align: center;
   font-size: 100%;
@@ -138,6 +138,7 @@ section:last-child {
   background: linear-gradient(to right, #981ccc, #7824d4);
   transition: 500ms;
   text-decoration: none;
+  word-break: break-all;
 }
 
 .contactItem:hover {
