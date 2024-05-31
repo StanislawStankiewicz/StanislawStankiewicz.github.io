@@ -92,24 +92,28 @@ section:last-child {
   background-image: url(./components/images/spacers/wave3.svg);
 }
 
-.welcome-page {
+.welcome-section {
   width: 100%;
   min-height: 120vh;
 }
 
-.welcome-page > h1 {
+.sub-header > h1 {
   color: white;
   text-align: center;
   font-size: 300%;
-  padding: 50px 0 20px 0;
+  margin-bottom: 2.5vh;
   z-index: 1;
+}
+
+.sub-header > p {
+  margin-bottom: 20px;
 }
 
 .contact > h2 {
   color: white;
   text-align: center;
   font-size: 100%;
-  padding: 50px 0 20px 0;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
@@ -121,6 +125,10 @@ section:last-child {
   list-style: none;
   padding: 0;
   z-index: 1;
+}
+
+#mail {
+  margin-bottom: 20px;
 }
 
 .contactItem {
@@ -163,7 +171,7 @@ footer {
   background: #202731;
 }
 
-footer p {
+footer > p {
   font-size: 80%;
   opacity: 0.5;
 }

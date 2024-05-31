@@ -17,7 +17,7 @@ export default function App() {
         sections={["About me", "GitHub", "Kaggle", "JavaScript"]}
       />
       <main>
-        <section id="aboutme" className="welcome-page violet">
+        <section id="aboutme" className="welcome-section violet">
           <header className="sub-header">
             <h1>Hello</h1>
             <p>
@@ -30,12 +30,14 @@ export default function App() {
             </p>
             <div className="contact">
               <h2>Contact</h2>
-              <ul className="contactList">
+              <ul id="mail" className="contactList">
                 <ContactItem
                   link="mailto:s.stankievitz@gmail.com"
                   Icon={MailIcon}
                   text="s.stankievitz@gmail.com"
                 />
+              </ul>
+              <ul className="contactList">
                 <ContactItem
                   link="https://github.com/StanislawStankiewicz"
                   Icon={GithubIcon}
