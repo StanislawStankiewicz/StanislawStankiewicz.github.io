@@ -48,7 +48,7 @@ export default function Header({ children, className, sections = [] }) {
         scrolled
           ? {
               backgroundColor: "transparent",
-              backdropFilter: "blur(30px)",
+              backdropFilter: "blur(15px)",
             }
           : {}
       }

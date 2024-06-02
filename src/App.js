@@ -56,7 +56,7 @@ export default function App() {
                 <ContactItem
                   link="https://leetcode.com/u/user2299F/"
                   Icon={LeetcodeIcon}
-                  text="Leetcode"
+                  text="LeetCode"
                 />
               </ul>
             </div>

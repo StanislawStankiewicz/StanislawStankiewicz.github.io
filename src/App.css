@@ -100,13 +100,16 @@ section:last-child {
 .sub-header > h1 {
   color: white;
   text-align: center;
-  font-size: 300%;
   margin-bottom: 2.5vh;
   z-index: 1;
 }
 
 .sub-header > p {
   margin-bottom: 20px;
+}
+
+#aboutme h1 {
+  font-size: 300%;
 }
 
 .contact > h2 {
