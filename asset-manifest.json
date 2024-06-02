@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.36ce6e7d.css",
-    "main.js": "/static/js/main.8fee5b79.js",
+    "main.css": "/static/css/main.22e9ee59.css",
+    "main.js": "/static/js/main.b3a013ef.js",
     "static/js/453.2aac3b00.chunk.js": "/static/js/453.2aac3b00.chunk.js",
     "static/media/blockshuffle.png": "/static/media/blockshuffle.e667c8eb6dd459605de3.png",
     "static/media/aids.png": "/static/media/aids.c27d071f9edc11233fc9.png",
@@ -29,18 +29,18 @@
     "static/media/python.svg": "/static/media/python.93ed7203518d90cd3d143f6e2e8f38dc.svg",
     "static/media/js.svg": "/static/media/js.5c55746f5cf8f4daf92e08fad965fc89.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.13f3aab8afad96f798a72797896f5ba1.svg",
-    "index.html": "/index.html",
     "static/media/mail.svg": "/static/media/mail.15b007cf496d9871cfc2bf5f1b50cb2d.svg",
-    "static/media/tensorflow.svg": "/static/media/tensorflow.158f6596e3babd4b2eb1aa9bf548020b.svg",
+    "static/media/tensorflow.svg": "/static/media/tensorflow.649f0d3bb310d054934f5583e0058ffe.svg",
     "static/media/css.svg": "/static/media/css.5c4f30be89df573de7dabe806bcfe2fe.svg",
     "static/media/kaggle.svg": "/static/media/kaggle.efdfa77f1a7de60f303eab1c66472c15.svg",
     "static/media/html.svg": "/static/media/html.e3b38fc325b551c1357e792844d40407.svg",
-    "main.36ce6e7d.css.map": "/static/css/main.36ce6e7d.css.map",
-    "main.8fee5b79.js.map": "/static/js/main.8fee5b79.js.map",
+    "index.html": "/index.html",
+    "main.22e9ee59.css.map": "/static/css/main.22e9ee59.css.map",
+    "main.b3a013ef.js.map": "/static/js/main.b3a013ef.js.map",
     "453.2aac3b00.chunk.js.map": "/static/js/453.2aac3b00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36ce6e7d.css",
-    "static/js/main.8fee5b79.js"
+    "static/css/main.22e9ee59.css",
+    "static/js/main.b3a013ef.js"
   ]
 }
