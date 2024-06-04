@@ -105,7 +105,7 @@ section:last-child {
 }
 
 .sub-header > p {
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
 }
 
 #aboutme h1 {
@@ -134,6 +134,18 @@ section:last-child {
   margin-bottom: 20px;
 }
 
+@property --color1 {
+  syntax: "<color>";
+  initial-value: #981ccc;
+  inherits: false;
+}
+
+@property --color2 {
+  syntax: "<color>";
+  initial-value: #7824d4;
+  inherits: false;
+}
+
 .contactItem {
   position: relative;
   color: white;
@@ -146,18 +158,15 @@ section:last-child {
   border-radius: 30px;
   cursor: pointer;
   overflow: hidden;
-  background: linear-gradient(to right, #981ccc, #7824d4);
-  transition: 500ms;
+  background: linear-gradient(to right, var(--color1), var(--color2));
+  transition: --color1 0.5s, --color2 0.5s;
   text-decoration: none;
   word-break: break-all;
 }
 
 .contactItem:hover {
-  box-shadow: rgb(0, 0, 0, 0.3) 0px 0px 15px 5px;
-}
-
-.contactItem:hover:before {
-  transform: skew(20deg);
+  --color1: #b300ff;
+  --color2: #7b00ff;
 }
 
 .icon {
