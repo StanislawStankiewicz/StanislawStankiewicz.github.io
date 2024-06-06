@@ -80,7 +80,7 @@ export const githubProjects = {
     description:
       "An implementation of an algorithm that encrypts a text message into an image using least significant bits. The example image uses all bits for clear visualization.",
     image: inImageEncryptionImage,
-    link: "https://github.com/StanislawStankiewicz/TwitchPointsTracker",
+    link: "https://github.com/StanislawStankiewicz/InImageEncryption",
     icons: [python],
   },
 };
