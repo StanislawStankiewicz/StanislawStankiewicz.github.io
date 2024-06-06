@@ -3,6 +3,7 @@ import myWebsiteImage from "./components/images/website.png";
 import blockshuffleImage from "./components/images/blockshuffle.png";
 import textEditorImage from "./components/images/texteditor.png";
 import twitchPointsListImage from "./components/images/twitchpoints.png";
+import inImageEncryptionImage from "./components/images/inimageencryption.png";
 
 import { ReactComponent as CSharpIcon } from "./components/icons/csharp.svg";
 import { ReactComponent as JavaIcon } from "./components/icons/java.svg";
@@ -60,6 +61,14 @@ export const githubProjects = {
     description:
       "A simple python application that allows tracking your Twitch Points across multiple channels and plots the point history.",
     image: twitchPointsListImage,
+    link: "https://github.com/StanislawStankiewicz/TwitchPointsTracker",
+    icons: [PythonIcon],
+  },
+  inImageEncryption: {
+    title: "In Image Encryption",
+    description:
+      "An implementation of an algorithm that encrypts a text message into an image using least significant bits. The example image uses all bits for clear visualization.",
+    image: inImageEncryptionImage,
     link: "https://github.com/StanislawStankiewicz/TwitchPointsTracker",
     icons: [PythonIcon],
   },
