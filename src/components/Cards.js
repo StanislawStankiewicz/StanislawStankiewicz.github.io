@@ -20,8 +20,8 @@ function Card({ content, iconsClass }) {
         <img src={image} alt="Avatar" />
       </div>
       <div className={`card-icons ${iconsClass}`}>
-        {icons.map((Icon, index) => (
-          <Icon key={index} className={`card-icon`} />
+        {icons.map(({ Icon, title }, index) => (
+          <Icon key={index} className={`card-icon`} title={title} />
         ))}
       </div>
       <div className="card-header">
