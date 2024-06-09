@@ -8,6 +8,7 @@ import { ReactComponent as MailIcon } from "./components/icons/mail.svg";
 import { ReactComponent as LinkedinIcon } from "./components/icons/linkedin.svg";
 import { ReactComponent as KaggleIcon } from "./components/icons/kaggle.svg";
 import { ReactComponent as LeetcodeIcon } from "./components/icons/leetcode.svg";
+import { ReactComponent as PicoCTFIcon } from "./components/icons/picoCTF.svg";
 
 export default function App() {
   return (
@@ -57,6 +58,11 @@ export default function App() {
                   link="https://leetcode.com/u/user2299F/"
                   Icon={LeetcodeIcon}
                   text="LeetCode"
+                />
+                <ContactItem
+                  link="https://play.picoctf.org/users/stahu"
+                  Icon={PicoCTFIcon}
+                  text="PicoCTF"
                 />
               </ul>
             </div>

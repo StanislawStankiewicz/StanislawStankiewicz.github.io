@@ -112,6 +112,11 @@ section:last-child {
   font-size: 300%;
 }
 
+.contact {
+  display: grid;
+  place-items: center;
+}
+
 .contact > h2 {
   color: white;
   text-align: center;
