@@ -4,10 +4,16 @@ import blockshuffleImage from "./components/images/blockshuffle.png";
 import textEditorImage from "./components/images/texteditor.png";
 import twitchPointsListImage from "./components/images/twitchpoints.png";
 import inImageEncryptionImage from "./components/images/inimageencryption.png";
+import wordleImage from "./components/images/wordle.png";
+import wordleSolverImage from "./components/images/wordlesolver.png";
 
 import { ReactComponent as CSharpIcon } from "./components/icons/csharp.svg";
 import { ReactComponent as JavaIcon } from "./components/icons/java.svg";
 import { ReactComponent as PythonIcon } from "./components/icons/python.svg";
+import { ReactComponent as NodeJSIcon } from "./components/icons/nodejs.svg";
+import { ReactComponent as AWSIcon } from "./components/icons/aws.svg";
+import { ReactComponent as TypeScriptIcon } from "./components/icons/typescript.svg";
+import { ReactComponent as TraefikIcon } from "./components/icons/traefik.svg";
 
 // kaggle projects
 import digitRecognitionImage from "./components/images/digits.png";
@@ -48,6 +54,14 @@ export const githubProjects = {
     link: "https://github.com/StanislawStankiewicz/GSBlockShuffle",
     icons: [JavaIcon],
   },
+  Wordle: {
+    title: "Wordle",
+    description:
+      "Popular word game Wordle implemented as a fullstack application. The game is built using React, Node.js with a REST API and is hosted on an AWS EC2 instance.",
+    image: wordleImage,
+    link: "http://54.226.222.83",
+    icons: [TraefikIcon, NodeJSIcon, TypeScriptIcon, ReactIcon, AWSIcon],
+  },
   textEditor: {
     title: "Text Editor",
     description:
@@ -70,6 +84,14 @@ export const githubProjects = {
       "An implementation of an algorithm that encrypts a text message into an image using least significant bits. The example image uses all bits for clear visualization.",
     image: inImageEncryptionImage,
     link: "https://github.com/StanislawStankiewicz/TwitchPointsTracker",
+    icons: [PythonIcon],
+  },
+  WordleSolver: {
+    title: "Wordle Solver",
+    description:
+      "A quick python hack for solving wordle puzzles with my API. The solver uses a list of English words and a scoring system to find the best possible word.",
+    image: wordleSolverImage,
+    link: "https://github.com/StanislawStankiewicz/WordleSolver",
     icons: [PythonIcon],
   },
 };
