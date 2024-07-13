@@ -14,6 +14,8 @@ import { ReactComponent as NodeJSIcon } from "./components/icons/nodejs.svg";
 import { ReactComponent as AWSIcon } from "./components/icons/aws.svg";
 import { ReactComponent as TypeScriptIcon } from "./components/icons/typescript.svg";
 import { ReactComponent as TraefikIcon } from "./components/icons/traefik.svg";
+import { ReactComponent as DockerIcon } from "./components/icons/docker.svg";
+import { ReactComponent as JestIcon } from "./components/icons/jest.svg";
 
 // kaggle projects
 import digitRecognitionImage from "./components/images/digits.png";
@@ -60,7 +62,15 @@ export const githubProjects = {
       "Popular word game Wordle implemented as a fullstack application. The game is built using React, Node.js with a REST API and is hosted on an AWS EC2 instance.",
     image: wordleImage,
     link: "http://54.226.222.83",
-    icons: [TraefikIcon, NodeJSIcon, TypeScriptIcon, ReactIcon, AWSIcon],
+    icons: [
+      TraefikIcon,
+      NodeJSIcon,
+      TypeScriptIcon,
+      ReactIcon,
+      JestIcon,
+      DockerIcon,
+      AWSIcon,
+    ],
   },
   textEditor: {
     title: "Text Editor",
