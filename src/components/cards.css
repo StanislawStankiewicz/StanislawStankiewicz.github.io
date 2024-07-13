@@ -8,10 +8,13 @@
   z-index: 1;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
     max-width: 80vw;
+  }
+  .card-header {
+    margin-top: 10vh;
   }
 }
 
@@ -19,6 +22,9 @@
   .cards {
     grid-template-columns: repeat(3, 1fr);
     max-width: 60vw;
+  }
+  .card-header {
+    margin-top: 12vh;
   }
 }
 
@@ -40,24 +46,12 @@
 .card-header {
   display: flex;
   flex-direction: column;
-  margin-top: 5vh;
+  margin-top: 12vh;
   padding: 20px;
   font-size: 100%;
   transition: 500ms;
   color: white;
   z-index: 1;
-}
-
-@media (min-width: 700px) {
-  .card-header {
-    margin-top: 10vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .card-header {
-    margin-top: 12vh;
-  }
 }
 
 .card-header h2 {
